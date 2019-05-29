@@ -1,0 +1,69 @@
+﻿@model IEnumerable<Binet_Gold.Models.Purchase_Credits>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Bill_Number1.Bill_Number1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Date_Time.Date_Time_ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Product_Purchase_Record1.Product_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Shop_Details.Shop_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Payment)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Balance)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Total_Amount)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Bill_Number1.Bill_Number1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Date_Time.Date_Time_ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Product_Purchase_Record1.Product_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Shop_Details.Shop_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Payment)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Balance)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Total_Amount)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Purchase_CreditID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Purchase_CreditID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Purchase_CreditID })
+        </td>
+    </tr>
+}
+
+</table>

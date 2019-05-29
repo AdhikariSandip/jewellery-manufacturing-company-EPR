@@ -1,0 +1,63 @@
+﻿@model IEnumerable<Binet_Gold.Models.General_Ledger>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Date_Time.Date_Time_ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Shop_Details.Shop_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ledger_Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Debit)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Credit)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Balance)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Date_Time.Date_Time_ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Shop_Details.Shop_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ledger_Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Debit)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Credit)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Balance)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.GL_ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.GL_ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.GL_ID })
+        </td>
+    </tr>
+}
+
+</table>

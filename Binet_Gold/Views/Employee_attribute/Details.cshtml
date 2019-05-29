@@ -1,0 +1,74 @@
+﻿@model Binet_Gold.Models.Employee_attribute
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Employee_attribute</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Date_Time.Date_Time_ID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Date_Time.Date_Time_ID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Employee_Details.Employee_Code)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Employee_Details.Employee_Code)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Shop_Details.Shop_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Shop_Details.Shop_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Particular)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Particular)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Salary)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Salary)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Payment)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Payment)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Remaining)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Remaining)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Employee_attribute_ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

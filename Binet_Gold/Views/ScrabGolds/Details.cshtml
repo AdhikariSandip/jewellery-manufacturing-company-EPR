@@ -1,0 +1,58 @@
+﻿@model Binet_Gold.Models.ScrabGold
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ScrabGold</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Shop_Details.Shop_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Shop_Details.Shop_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Scrab_Gold_Weight)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Scrab_Gold_Weight)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BuyPercent)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BuyPercent)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Rate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Rate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Amount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Amount)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ScrabGold_ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

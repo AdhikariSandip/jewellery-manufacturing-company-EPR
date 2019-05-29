@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" role="button" aria-expanded="false" href="#" data-toggle="dropdown">Web <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li>@Html.ActionLink("Account", "Create", "Accounts")</li>
+                            <li>@Html.ActionLink("Bill Attribute", "Create", "Bill_attribute")</li>
+                            <li>@Html.ActionLink("Invoice", "Create", "Bill_Number")</li>
+                            <li>@Html.ActionLink("Account", "Create", "Accounts")</li>
+                            <li>@Html.ActionLink("Cash Booking", "Create", "Cash_Book")</li>
+                            <li>@Html.ActionLink("Clients", "Create", "Clients")</li>
+                            <li>@Html.ActionLink("Contract", "Create", "Contract_Persons")</li>
+                            <li>@Html.ActionLink("Dates", "Create", "Date_Time")</li>
+                            <li>@Html.ActionLink("Employee", "Create", "Employee_Details")</li>
+                            <li>@Html.ActionLink("Employee Attributes", "Create", "Employee_attribute")</li>
+                            <li>@Html.ActionLink("Daily Rates", "Create", "EveryDay_rate")</li>
+                            <li>@Html.ActionLink("Fiscal Year", "Create", "FiscalYears")</li>
+                            <li>@Html.ActionLink("General Ledger", "Create", "General_Ledger")</li>
+                            <li>@Html.ActionLink("Gold Issue", "Create", "Gold_Issue")</li>
+                            <li>@Html.ActionLink("Gold Purchase", "Create", "Gold_PurchaseRecord")</li>
+                            <li>@Html.ActionLink("Journal", "Create", "Journal_Voucher")</li>
+                            <li>@Html.ActionLink("Posts", "Create", "Posts")</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" role="button" aria-expanded="false" href="#" data-toggle="dropdown">Web <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li>@Html.ActionLink("Product Attributes", "Create", "Product_Attribute")</li>
+                            <li>@Html.ActionLink("PPR", "Create", "Product_Purchase_Record")</li>
+                            <li>@Html.ActionLink("Products", "Create", "Products")</li>
+                            <li>@Html.ActionLink("Purchase Credits", "Create", "Purchase_Credits")</li>
+                            <li>@Html.ActionLink("Rates", "Create", "Rates")</li>
+                            <li>@Html.ActionLink("Scrab Gold", "Create", "ScrabGolds")</li>
+                            <li>@Html.ActionLink("Shop Debtors", "Create", "Shop_Debtor_Account")</li>
+                            <li>@Html.ActionLink("Shop info", "Create", "Shop_Details")</li>
+                            <li>@Html.ActionLink("Users", "Create", "Users")</li>
+                        </ul>
+                    </li>
+                </ul>
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Binet_Gold.Models.FiscalYear>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Shop_Details.Shop_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Fisccal_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Date_from)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Date_to)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Shop_Details.Shop_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fisccal_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Date_from)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Date_to)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Fiscal_ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Fiscal_ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Fiscal_ID })
+        </td>
+    </tr>
+}
+
+</table>

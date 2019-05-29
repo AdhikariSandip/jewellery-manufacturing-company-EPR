@@ -1,0 +1,123 @@
+﻿@model IEnumerable<Binet_Gold.Models.Gold_Issue>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Client1.Client_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Date_Time.Date_Time_ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Employee_Details.Employee_Code)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Shop_Details.Shop_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Particular)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Weight)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Order_Weight)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Rate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Return_Date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Return_Prod_Weight)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Return_tukraSun)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Lost_Sun)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Lost_amount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Order_OrNot)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Wages)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumberOfItems_Received)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Client1.Client_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Date_Time.Date_Time_ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Employee_Details.Employee_Code)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Shop_Details.Shop_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Particular)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Weight)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Order_Weight)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Rate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Return_Date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Return_Prod_Weight)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Return_tukraSun)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Lost_Sun)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Lost_amount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Order_OrNot)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Wages)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumberOfItems_Received)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Gold_IssueID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Gold_IssueID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Gold_IssueID })
+        </td>
+    </tr>
+}
+
+</table>

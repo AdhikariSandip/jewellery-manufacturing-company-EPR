@@ -1,0 +1,74 @@
+﻿@model Binet_Gold.Models.Journal_Voucher
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Journal_Voucher</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Account1.Account_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Account1.Account_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Date_Time.Date_Time_ID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Date_Time.Date_Time_ID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Shop_Details.Shop_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Shop_Details.Shop_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Particular)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Particular)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ledger_Folio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ledger_Folio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Debit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Debit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Credit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Credit)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Journal_ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

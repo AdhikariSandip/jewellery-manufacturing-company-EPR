@@ -1,0 +1,63 @@
+﻿@model IEnumerable<Binet_Gold.Models.Contract_Persons>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Date_Time.Date_Time_ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Employee_Details.Employee_Code)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Shop_Details.Shop_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Particular)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Amount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Payment)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Date_Time.Date_Time_ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Employee_Details.Employee_Code)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Shop_Details.Shop_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Particular)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Amount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Payment)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.CP_ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.CP_ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.CP_ID })
+        </td>
+    </tr>
+}
+
+</table>

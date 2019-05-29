@@ -1,0 +1,129 @@
+﻿@model IEnumerable<Binet_Gold.Models.Product_Attribute>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Bill_Number.Bill_Number1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Client.Client_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Date_Time.Date_Time_ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Product.Product_Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Product_Purchase_Record1.Product_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Shop_Details.Shop_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.P_Code)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Quality)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Net_Weight)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Westages)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Total_weight)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Wages)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Diamond_Stone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Rate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Sold_OrNot)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Bikri_Date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Purchase_Date)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Bill_Number.Bill_Number1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Client.Client_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Date_Time.Date_Time_ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Product.Product_Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Product_Purchase_Record1.Product_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Shop_Details.Shop_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.P_Code)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Quality)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Net_Weight)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Westages)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Total_weight)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Wages)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Diamond_Stone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Rate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Sold_OrNot)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Bikri_Date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Purchase_Date)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Product_attributeID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Product_attributeID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Product_attributeID })
+        </td>
+    </tr>
+}
+
+</table>

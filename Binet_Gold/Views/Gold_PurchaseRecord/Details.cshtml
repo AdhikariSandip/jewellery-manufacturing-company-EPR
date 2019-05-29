@@ -1,0 +1,74 @@
+﻿@model Binet_Gold.Models.Gold_PurchaseRecord
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Gold_PurchaseRecord</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Shop_Details.Shop_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Shop_Details.Shop_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Vendor_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Vendor_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Weight)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Weight)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Rate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Rate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Amount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Amount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Paid)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Paid)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Remaining)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Remaining)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.GP_ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

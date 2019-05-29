@@ -1,0 +1,66 @@
+﻿@model Binet_Gold.Models.Contract_Persons
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Contract_Persons</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Date_Time.Date_Time_ID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Date_Time.Date_Time_ID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Employee_Details.Employee_Code)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Employee_Details.Employee_Code)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Shop_Details.Shop_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Shop_Details.Shop_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Particular)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Particular)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Amount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Amount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Payment)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Payment)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CP_ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

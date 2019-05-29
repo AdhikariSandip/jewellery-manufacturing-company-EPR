@@ -1,0 +1,74 @@
+﻿@model Binet_Gold.Models.Employee_Details
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Employee_Details</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Post1.Post_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Post1.Post_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Shop_Details.Shop_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Shop_Details.Shop_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Employee_Code)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Employee_Code)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Employee_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Employee_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Employee_Address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Employee_Address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Employee_PhoneNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Employee_PhoneNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Employee_nationality)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Employee_nationality)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Employee_ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,74 @@
+﻿@model Binet_Gold.Models.Shop_Debtor_Account
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Shop_Debtor_Account</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Bill_Number1.Bill_Number1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Bill_Number1.Bill_Number1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Client1.Client_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Client1.Client_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Date_Time.Date_Time_ID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Date_Time.Date_Time_ID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Shop_Details.Shop_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Shop_Details.Shop_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Total_amount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Total_amount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Payment)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Payment)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Balance)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Balance)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ShopDebtor_ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
